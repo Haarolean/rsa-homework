@@ -1,0 +1,10 @@
+RSA implementation example.
+
+Known bugs:
+It could be the case that the message >= modulus. To avoid, use
+a do-while loop to generate key until modulus happen to be exactly N bits.
+
+It's possible that gcd(phi, publicKey) != 1 in which case
+the key generation fails. This will only happen if phi is a
+multiple of 65537. To avoid, use a do-while loop to generate
+keys until the gcd is 1.
